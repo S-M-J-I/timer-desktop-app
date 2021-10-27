@@ -60,6 +60,7 @@ public class TimerController extends BaseController{
             }
         });
 
+        countdown.setDaemon(true);
         countdown.start();
     }
 
