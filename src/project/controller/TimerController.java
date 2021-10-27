@@ -41,7 +41,12 @@ public class TimerController extends BaseController{
         String secString = secOne.getText() + secTwo.getText();
 
         // TODO: compose the time
-        long composedTime = Integer.parseInt(secString) * 1000L;
+        long composedHour = Integer.parseInt(hourString) * 3600L;
+        long composedMin = Integer.parseInt(minString) * 60L;
+        long composedSec = Integer.parseInt(secString);
+        long composedTime = (composedHour + composedMin + composedSec) * 1000L;
+
+        System.out.println(composedTime);
         Thread countdown = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -52,13 +57,6 @@ public class TimerController extends BaseController{
                 } catch (InterruptedException e) {
                     System.out.println(e.getMessage());
                 }
-            }
-        });
-
-        Thread countdownAnimated = new Thread(new Runnable() {
-            @Override
-            public void run() {
-
             }
         });
 
