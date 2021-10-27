@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="204.0" layoutY="163.0" style="-fx-alignment: center; -fx-font-size: 50px; -fx-font-weight: bold;" text=":" />
+      <Label layoutX="383.0" layoutY="163.0" style="-fx-alignment: center; -fx-font-size: 50px; -fx-font-weight: bold;" text=":" />
+      <Button layoutX="237.0" layoutY="326.0" mnemonicParsing="false" onAction="#onStartTimer" prefHeight="43.0" prefWidth="125.0" style="-fx-alignment: center; -fx-background-color: cyan; -fx-font-weight: bold; -fx-font-size: 15px;" text="START TIMER" />
+      <Button layoutX="47.0" layoutY="125.0" mnemonicParsing="false" onAction="#onhourOneUpBtn" prefHeight="26.0" prefWidth="68.0" style="-fx-alignment: center;">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/up.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="47.0" layoutY="249.0" mnemonicParsing="false" onAction="#onhourOneDownBtn" prefHeight="26.0" prefWidth="68.0">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/down.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="125.0" layoutY="125.0" mnemonicParsing="false" onAction="#onhourTwoUpBtn" prefHeight="26.0" prefWidth="68.0" style="-fx-alignment: center;">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/up.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="125.0" layoutY="249.0" mnemonicParsing="false" onAction="#onhourTwoDownBtn" prefHeight="26.0" prefWidth="68.0">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/down.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="228.0" layoutY="125.0" mnemonicParsing="false" onAction="#onminOneUpBtn" prefHeight="26.0" prefWidth="68.0" style="-fx-alignment: center;">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/up.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="228.0" layoutY="249.0" mnemonicParsing="false" onAction="#onminOneDownBtn" prefHeight="26.0" prefWidth="68.0">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/down.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="306.0" layoutY="124.0" mnemonicParsing="false" onAction="#onminTwoUpBtn" prefHeight="26.0" prefWidth="68.0" style="-fx-alignment: center;">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/up.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="306.0" layoutY="248.0" mnemonicParsing="false" onAction="#onminTwoDownBtn" prefHeight="26.0" prefWidth="68.0">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/down.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="407.0" layoutY="125.0" mnemonicParsing="false" onAction="#onsecOneUpBtn" prefHeight="26.0" prefWidth="68.0" style="-fx-alignment: center;">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/up.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="407.0" layoutY="249.0" mnemonicParsing="false" onAction="#onsecOneDownBtn" prefHeight="26.0" prefWidth="68.0">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/down.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="485.0" layoutY="124.0" mnemonicParsing="false" onAction="#onsecTwoUpBtn" prefHeight="26.0" prefWidth="68.0" style="-fx-alignment: center;">
+         <graphic>
+            <ImageView fitHeight="16.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/up.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="485.0" layoutY="248.0" mnemonicParsing="false" onAction="#onsecTwoDownBtn" prefHeight="26.0" prefWidth="68.0">
+         <graphic>
+            <ImageView fitHeight="18.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/down.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="hourOne" layoutX="47.0" layoutY="163.0" prefHeight="78.0" prefWidth="68.0" style="-fx-alignment: center; -fx-font-size: 50px; -fx-font-weight: bold; -fx-padding: 0px;" text="0" />
+      <Label fx:id="hourTwo" layoutX="125.0" layoutY="163.0" prefHeight="78.0" prefWidth="68.0" style="-fx-alignment: center; -fx-font-size: 50px; -fx-font-weight: bold; -fx-padding: 0px;" text="0" />
+      <Label fx:id="minOne" layoutX="228.0" layoutY="163.0" prefHeight="78.0" prefWidth="68.0" style="-fx-alignment: center; -fx-font-size: 50px; -fx-font-weight: bold; -fx-padding: 0px;" text="0" />
+      <Label fx:id="minTwo" layoutX="306.0" layoutY="163.0" prefHeight="78.0" prefWidth="68.0" style="-fx-alignment: center; -fx-font-size: 50px; -fx-font-weight: bold; -fx-padding: 0px;" text="0" />
+      <Label fx:id="secOne" layoutX="407.0" layoutY="161.0" prefHeight="78.0" prefWidth="68.0" style="-fx-alignment: center; -fx-font-size: 50px; -fx-font-weight: bold; -fx-padding: 0px;" text="0" />
+      <Label fx:id="secTwo" layoutX="485.0" layoutY="163.0" prefHeight="78.0" prefWidth="68.0" style="-fx-alignment: center; -fx-font-size: 50px; -fx-font-weight: bold; -fx-padding: 0px;" text="0" />
+      <Label layoutX="263.0" layoutY="36.0" prefHeight="34.0" prefWidth="74.0" style="-fx-alignment: center; -fx-font-size: 20px; -fx-font-weight: bold;" text="TIMER" />
+   </children>
+</AnchorPane>
