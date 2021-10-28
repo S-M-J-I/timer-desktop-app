@@ -3,6 +3,7 @@ package project.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import project.threads.CountdownAnimatedThread;
 import project.threads.CountdownThread;
 import project.views.ViewFactory;
 
@@ -37,16 +38,22 @@ public class TimerController extends BaseController{
         String secString = secOne.getText() + secTwo.getText();
 
         // TODO: compose the time
-        long composedHour = Integer.parseInt(hourString) * 3600L;
-        long composedMin = Integer.parseInt(minString) * 60L;
-        long composedSec = Integer.parseInt(secString);
-        long composedTime = (composedHour + composedMin + composedSec) * 1000L;
+        long composedTime = composeTime(hourString, minString, secString);
 
         System.out.println(composedTime);
         Thread countdown = new CountdownThread(composedTime);
-
+        Thread countdownAnimated = new CountdownAnimatedThread(composedTime, secTwo);
+        countdownAnimated.setDaemon(true);
         countdown.setDaemon(true);
         countdown.start();
+        countdownAnimated.start();
+    }
+
+    private long composeTime(String hourString, String minString, String secString) {
+        long composedHour = Integer.parseInt(hourString) * 3600L;
+        long composedMin = Integer.parseInt(minString) * 60L;
+        long composedSec = Integer.parseInt(secString);
+        return (composedHour + composedMin + composedSec) * 1000L;
     }
 
 
