@@ -67,7 +67,7 @@ public class TimerController extends BaseController{
     @FXML
     void onhourOneUpBtn(ActionEvent event) {
         int curr = Integer.parseInt(hourOne.getText());
-        int next = curr + 1;
+        int next = curr < 9 ? curr + 1 : curr;
         hourOne.setText(Integer.toString(next));
     }
 
@@ -81,7 +81,13 @@ public class TimerController extends BaseController{
     @FXML
     void onhourTwoUpBtn(ActionEvent event) {
         int curr = Integer.parseInt(hourTwo.getText());
-        int next = curr + 1;
+        int next = 0;
+        if(curr < 9) {
+            next = curr + 1;
+        } else {
+            next = 0;
+            hourOne.setText( Integer.toString( Integer.parseInt(hourOne.getText()) + 1) );
+        }
         hourTwo.setText(Integer.toString(next));
     }
 
