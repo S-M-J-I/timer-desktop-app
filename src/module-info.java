@@ -9,6 +9,7 @@ module Timer.Clock {
     opens project;
     opens project.views;
     opens project.controller;
+    opens project.threads;
     opens project.images;
     opens project.sounds;
 }

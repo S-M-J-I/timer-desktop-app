@@ -6,6 +6,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import project.threads.CountdownAnimatedThread;
+import project.threads.CountdownThread;
 import project.views.ViewFactory;
 
 import java.io.File;
@@ -47,28 +49,10 @@ public class TimerController extends BaseController{
         long composedTime = (composedHour + composedMin + composedSec) * 1000L;
 
         System.out.println(composedTime);
-        Thread countdown = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                try {
-                    Thread.sleep(composedTime);
-                    System.out.println("DONE");
-                    playSound();
-                } catch (InterruptedException e) {
-                    System.out.println(e.getMessage());
-                }
-            }
-        });
+        Thread countdown = new CountdownThread(composedTime);
 
         countdown.setDaemon(true);
         countdown.start();
-    }
-
-    private void playSound() {
-        String musicFile = "src/project/sounds/alarm.wav";
-        Media sound = new Media(new File(musicFile).toURI().toString());
-        MediaPlayer mediaPlayer = new MediaPlayer(sound);
-        mediaPlayer.play();
     }
 
 
