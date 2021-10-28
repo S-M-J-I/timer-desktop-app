@@ -3,15 +3,9 @@ package project.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-import project.threads.CountdownAnimatedThread;
 import project.threads.CountdownThread;
 import project.views.ViewFactory;
 
-import java.io.File;
-import java.io.IOException;
 
 public class TimerController extends BaseController{
     public TimerController(ViewFactory viewFactory, String fxmlName) {
