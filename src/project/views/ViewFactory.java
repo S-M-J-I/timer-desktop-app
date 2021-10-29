@@ -4,6 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import project.controller.AlertController;
 import project.controller.BaseController;
 import project.controller.TimerController;
 
@@ -14,6 +15,12 @@ public class ViewFactory {
         BaseController controller = new TimerController(this, "TimerWindow");
 
         init_window(controller, "Timer");
+    }
+
+    public void showAlert() {
+        BaseController controller = new AlertController(this, "AlertWindow");
+
+        init_window(controller, "*beep beep*");
     }
 
     private void init_window(BaseController controller, String title) {

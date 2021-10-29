@@ -43,8 +43,10 @@ public class TimerController extends BaseController{
         System.out.println(composedTime);
         Thread countdown = new CountdownThread(composedTime);
         Thread countdownAnimated = new CountdownAnimatedThread(composedTime, secTwo);
+
         countdownAnimated.setDaemon(true);
         countdown.setDaemon(true);
+
         countdown.start();
         countdownAnimated.start();
     }
